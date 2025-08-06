@@ -18,6 +18,8 @@ public class CharCeiling {
                 end = mid - 1;
             }
         }
+        if (start == letters.length)
+            return letters[0]; // this if condition can be use instead of that modulo thing. but as the function wants a return statement, we needed to keep that modulo statement, though it has no use as its work is done by the if check.
         return letters[start % letters.length];
     }
 
