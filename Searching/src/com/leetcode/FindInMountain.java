@@ -2,9 +2,16 @@ package com.leetcode;
 
 // https://leetcode.com/problems/find-in-mountain-array/
 
+/*
+    Approach:
+    1. Find the Peak
+    2. Binary Search in Ascending array (order-agnostic)
+    3. If not found, binary search in decreasing array (order-agnostic)
+ */
+
 public class FindInMountain {
 
-    int search(int[] arr, int target) {
+    public static int search(int[] arr, int target) {
         int peak = peakIndexInMountainArray(arr);
         int firstHalf = orderAgnosticBinarySearch(arr, target, 0, peak);
         if (firstHalf != -1) {
@@ -16,7 +23,7 @@ public class FindInMountain {
         return secondHalf;
     }
 
-    public int peakIndexInMountainArray(int[] arr) {
+    public static int peakIndexInMountainArray(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 
@@ -34,7 +41,7 @@ public class FindInMountain {
         return start;
     }
 
-    static int orderAgnosticBinarySearch(int[] arr, int target, int start, int end) {
+    public static int orderAgnosticBinarySearch(int[] arr, int target, int start, int end) {
         boolean isAscending = arr[start] < arr[end];
 
         while (start <= end) {
@@ -61,5 +68,11 @@ public class FindInMountain {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,3,1};
+        int target = 3;
+        System.out.println(search(arr, target));
     }
 }
