@@ -40,7 +40,16 @@ public class RotatedSortedDuplications {
                 end--;
             }
             // left side is sorted hence pivot at right
+            else if (arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[mid] > arr[end] )) {
+                start = mid + 1;
+            }
+            end = mid - 1;
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2,2,9,2,2,2,2};
+        System.out.println(findPivotWithDuplicates(arr));
     }
 }
