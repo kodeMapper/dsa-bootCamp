@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class bubbleSort {
 
-    static void swap(int[] arr) {
+    static void sort(int[] arr) {
         // run the outer loop (iteration) n-1 times
         boolean swapped;
         for (int i = 0; i < arr.length; i++) {
@@ -33,6 +33,6 @@ public class bubbleSort {
 
     public static void main(String[] args) {
         int[] arr = {5, 3, 1, 10, 8, 9};
-        swap(arr);
+        sort(arr);
     }
 }
