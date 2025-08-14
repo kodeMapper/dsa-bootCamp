@@ -1,7 +1,6 @@
 package com.sarang;
 
 import java.util.Arrays;
-
 public class insertionSort {
 
     static void insertion(int[] arr) {
