@@ -52,8 +52,8 @@ public class cyclicSort {
     public static void main(String[] args) {
         int[] arr = {3,5,2,1,4};
 //        sort1(arr);
-//        sort2(arr);
-        sort3(arr);
+        sort2(arr);
+//        sort3(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
