@@ -24,3 +24,11 @@ How to approach a problem?
         d) Use debugger to see the flow
     5. See how the values are returned in each step
     6. See where the function call will come out. In the end, you will come out of the main function
+
+Variables in case of Recursion:
+    1. the parameters
+    2. return type
+    3. body of function
+
+Binary Search using Recursion:
+    Slides notes

@@ -12,7 +12,7 @@ public class Fibo_Recursion {
         System.out.println(n + "th" + " fibonaci number is: " + fibo(n));
     }
 
-    static int fibo(int n) {
+    static long fibo(int n) {
         // base condition
         if(n==0) {
             return 0;
