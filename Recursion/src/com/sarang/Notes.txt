@@ -1,0 +1,11 @@
+Recursion --> Function calling itself
+
+Why recursion?
+    It helps us in solving bigger complex problems in simpler way
+    We can convert recursion solutions into iterations and vica-versa
+
+Space Complexity:
+    not constant because of recursive calls
+
+Visualizing recursion: (VVimp)
+    Recursion Tree (screenShot)
