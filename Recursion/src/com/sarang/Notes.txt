@@ -9,3 +9,18 @@ Space Complexity:
 
 Visualizing recursion: (VVimp)
     Recursion Tree (screenShot)
+
+Recurrence relation:
+    formula in terms of recursion { fibo(n) = fibo(n-1) + fibo(n-2) }
+
+How to approach a problem?
+    1. Identify weather u can break the problem into smaller problems.
+    2. Form the recurrence relation (if needed)
+    3. Draw the recursive tree
+    4. About the tree,
+        a) See the flow of functions, how they are getting in stack
+        b) identify and focus on the left tree calls and right tree calls
+        c) Draw the tree and arrows on pen-paper
+        d) Use debugger to see the flow
+    5. See how the values are returned in each step
+    6. See where the function call will come out. In the end, you will come out of the main function
