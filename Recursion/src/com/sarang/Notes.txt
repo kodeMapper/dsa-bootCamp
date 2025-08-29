@@ -7,9 +7,6 @@ Why recursion?
 Space Complexity:
     not constant because of recursive calls
 
-Visualizing recursion: (VVimp)
-    Recursion Tree (screenShot)
-
 Recurrence relation:
     formula in terms of recursion { fibo(n) = fibo(n-1) + fibo(n-2) }
 
@@ -29,6 +26,3 @@ Variables in case of Recursion:
     1. the parameters
     2. return type
     3. body of function
-
-Binary Search using Recursion:
-    Slides notes
