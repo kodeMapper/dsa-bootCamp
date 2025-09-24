@@ -3,6 +3,8 @@ package com.sarang;
 
 /*
     logic: a ^ a = 0
+    also keep in mind that the operation ^ follows commutative property.
+    hence, [2^2 ^ 3^3 ^ 4^4 ^ 6 ]
  */
 
 public class FindUnique {
