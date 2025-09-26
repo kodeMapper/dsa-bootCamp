@@ -1,6 +1,6 @@
 package com.sarang;
 
-public class noOfDigits {
+public class NoOfDigits {
 
     public static void main(String[] args) {
         int b = 2;
