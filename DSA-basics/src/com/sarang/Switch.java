@@ -7,7 +7,7 @@ public class Switch {
         Scanner sc = new Scanner(System.in);
         String fruit = sc.next();
 
-/*        == compares the values along with their reference. For ex, if a points to "mango" and b points to         other "mango" then == will give false. Hence we use .equal() method
+/*        == compares the values along with their reference. For ex, if a points to "mango" and b points to other "mango" then == will give false. Hence we use .equal() method
         if (fruit == "mango") {
 
         }
@@ -31,7 +31,10 @@ public class Switch {
 //        enhanced syntax: alt+enter
 
         switch (fruit) {
-            case "mango" -> System.out.println("King of fruit");
+            case "mango" -> {
+                System.out.println("King of fruit");
+                System.out.println("Hi there");
+            }
             case "apple" -> System.out.println("Keeps Doc away");
             default -> System.out.println("Other");
         }
