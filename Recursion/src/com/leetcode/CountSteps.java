@@ -3,23 +3,22 @@ package com.leetcode;
 public class CountSteps {
 
     public static void main(String[] args) {
-        System.out.println(countSteps(14));
+        System.out.println(numberOfSteps(41));
     }
 
-    static int steps = 0;
+    static int numberOfSteps(int num) {
+        return helper(num, 0);
+    }
 
-    static int countSteps(int num) {
+    static int helper(int num, int steps) {
         if(num == 0) {
             return steps;
         }
 
         if(num % 2 == 0) {
-            num = num/2;
-        } else {
-            num -= 1;
+            return helper(num/2, steps+1);
         }
 
-        steps += 1;
-        return countSteps(num);
+        return helper(num-1, steps+1);
     }
 }
