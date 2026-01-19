@@ -6,10 +6,12 @@ public class VarArgs {
 //    When we don't know the number of args to be passed
 
     static void dynamicArray(int ...v) {
+
         System.out.println(Arrays.toString(v));
     }
 
     static void diffArgs(int a, int b, String ...s) {
+
         System.out.println(a +" "+b+" "+ Arrays.toString(s));
     }
 

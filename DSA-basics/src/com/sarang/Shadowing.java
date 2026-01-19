@@ -4,6 +4,7 @@ public class Shadowing {
     static int x = 90; // inside a class, not method. This x will be shadowed at line 8 (lower level is overriding the upper level)
 
     static void call() {
+
         System.out.println(x); // 90
     }
 
