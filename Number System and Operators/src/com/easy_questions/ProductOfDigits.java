@@ -4,7 +4,7 @@ public class ProductOfDigits {
     // same as sumOfDigits
 
     public static void main(String[] args) {
-        System.out.println(prod(12532));
+        System.out.println(prod(505));
     }
 
     static int prod(int n) {
