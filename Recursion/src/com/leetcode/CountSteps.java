@@ -1,5 +1,9 @@
 package com.leetcode;
 
+/*
+    imp for understanding helper function - 1342
+ */
+
 public class CountSteps {
 
     public static void main(String[] args) {
