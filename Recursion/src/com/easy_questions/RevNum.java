@@ -9,6 +9,7 @@ public class RevNum {
         revOf_1(3572);
         System.out.println(sum);
         System.out.println(revOf_2(49268));
+        System.out.println(revOf_3(694752));
     }
 
     static int sum = 0;
@@ -32,5 +33,21 @@ public class RevNum {
         int placeVal = (int)(Math.pow(10, digits-1));
         --digits;
         return (rem * placeVal) + revOf_2(n/10);
+    }
+
+    // we needed to pass something extra in arg (placeVal in this case), hence use helper function (vid - 47:00 min)
+    // sometimes u might need some *additional variables* in the args, in that case, make helper function
+    static int revOf_3(int n) {
+        int digits = (int)(Math.log10(n) + 1);
+        return helper(n, digits);
+    }
+
+    private static int helper(int n, int digits) {
+        if (n%10 == n) {
+            return n;
+        }
+
+        int rem = n%10;
+        return rem* (int)(Math.pow(10, digits-1)) + helper(n/10, digits-1);
     }
 }
