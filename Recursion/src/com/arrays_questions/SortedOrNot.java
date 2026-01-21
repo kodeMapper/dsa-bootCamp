@@ -20,5 +20,5 @@ public class SortedOrNot {
 }
 
 /*
-    No need of helper here. we can do directly as well. just call helper from main with (arr, 0)
+    No need of helper here. coz, we are not returning any number. we can do directly as well. just call helper from main with (arr, 0)
  */
