@@ -13,8 +13,7 @@ public class Patterns {
             triangle1(row, col+1);
         } else {
             System.out.println();
-            triangle1(
-                    row-1, 0);
+            triangle1(row-1, 0);
         }
     }
 
