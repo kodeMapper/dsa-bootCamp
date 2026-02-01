@@ -1,4 +1,4 @@
-package com.patterns_and_basicSorting;
+package com.patterns_and_Sorting;
 
 public class Patterns {
     public static void main(String[] args) {
