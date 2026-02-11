@@ -54,3 +54,5 @@ public class MergeSort {
         return mix;
     }
 }
+
+// this method creates multiple copies (objects) of the array which increases space complexity. So we use in-place method, which modifies the existing array. We pass only indices instead of copy of the array.
