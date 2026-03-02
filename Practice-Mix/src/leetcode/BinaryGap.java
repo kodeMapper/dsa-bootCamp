@@ -9,13 +9,15 @@ public class BinaryGap {
         boolean isFirst = false;
 
         for(right=0; right<binary.length(); right++) {
-            if(binary.charAt(right)==1 && !isFirst) {
+            if(binary.charAt(right)=='1' && !isFirst) {
                 isFirst = true;
+                continue;
             }
 
-            else if(binary.charAt(right)==1 && isFirst) {
+            else if(binary.charAt(right)=='1' && isFirst) {
+                maxDist = Math.max(maxDist, right-left);
                 left = right;
-                maxDist = Math.max(maxDist, right-left+1);
+                isFirst = false;
             }
         }
 
@@ -23,6 +25,6 @@ public class BinaryGap {
     }
 
     public static void main(String[] args) {
-        System.out.println(binaryGap(22));;
+        System.out.println(binaryGap(13));;
     }
 }
