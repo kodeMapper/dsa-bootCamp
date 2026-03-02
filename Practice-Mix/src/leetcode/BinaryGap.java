@@ -17,7 +17,7 @@ public class BinaryGap {
             else if(binary.charAt(right)=='1' && isFirst) {
                 maxDist = Math.max(maxDist, right-left);
                 left = right;
-                isFirst = false;
+//                isFirst = false;
             }
         }
 
