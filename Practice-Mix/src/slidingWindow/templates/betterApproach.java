@@ -1,4 +1,4 @@
-package slidingWindow;
+package slidingWindow.templates;
 
 public class betterApproach {
     public static void main(String[] args) {
