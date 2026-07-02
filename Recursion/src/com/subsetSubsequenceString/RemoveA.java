@@ -24,9 +24,31 @@ public class RemoveA {
         else return up.charAt(0) + removeAandReturn(up.substring(1));
     }
 
+    // if we want to remove a string("apple") instead of a character ('a')
+    static String removeAppleAndReturn(String up) {
+        if (up.isEmpty()) {
+            return "";
+        }
+
+        if(up.startsWith("apple")) return removeAppleAndReturn(up.substring(5));
+        else return up.charAt(0) + removeAppleAndReturn(up.substring(1));
+    }
+
+    // if we want to remove "app" only if its not the part of "apple"
+    static String removeAppAndReturn(String up) {
+        if (up.isEmpty()) {
+            return "";
+        }
+
+        if(up.startsWith("app") && !up.startsWith("apple")) return removeAppAndReturn(up.substring(3));
+        else return up.charAt(0) + removeAppAndReturn(up.substring(1));
+    }
+
     public static void main(String[] args) {
-        String str = "abcdddaca";
+        String str = "abcdappledaca";
 //        removeA("", str);
-        System.out.println(removeAandReturn(str));
+//        System.out.println(removeAandReturn(str));
+//        System.out.println(removeAppleAndReturn(str));
+        System.out.println(removeAppAndReturn("abcappbshrapple"));
     }
 }
