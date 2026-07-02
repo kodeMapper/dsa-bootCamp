@@ -1,18 +1,20 @@
 package com.subsetSubsequenceString;
 
 public class RemoveA {
-    static String ans = "";
 
-    static void removeA(String str, int idx) {
-        if(str.charAt(idx) == 'a') return "";
-        else {
-
+    static void removeA(String p, String up) {
+        if (up.isEmpty()) {
+            System.out.println(p);
+            return;
         }
+        char ch = up.charAt(0);
+
+        if(ch != 'a') removeA(p + ch, up.substring(1));
+        else removeA(p, up.substring(1));
     }
 
     public static void main(String[] args) {
         String str = "abcdddaca";
-        String ans = removeA(str, 0);
-        System.out.println(ans);
+        removeA("", str);
     }
 }
