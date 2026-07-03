@@ -1,4 +1,4 @@
-package com.kunal.strings;
+package com.subsetSubsequenceString;
 
 import java.util.ArrayList;
 
