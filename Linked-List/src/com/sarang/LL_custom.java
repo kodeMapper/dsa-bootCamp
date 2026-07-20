@@ -61,6 +61,19 @@ public class LL_custom {
         size++;
     }
 
+    // DELETE FROM START
+    public int deleteFirstAndReturn() {
+        int val = head.value; // this will be deleted
+        head = head.next;
+
+        if(head == null) {
+            tail = null;
+        }
+
+        size--;
+        return val;
+    }
+
     // DISPLAY
     public void displayLL() {
         Node temp = head;

@@ -9,7 +9,6 @@ public class Main {
 //        ll.insertAtFirst(20);
 //        ll.insertAtFirst(30);
 //        ll.insertAtFirst(40);
-//
 //        ll.displayLL();
 
         ll.insertAtLast(10);
@@ -18,7 +17,10 @@ public class Main {
         ll.insertAtLast(40);
 
         ll.insertAtMiddle(69, 2);
+        ll.displayLL();
 
+        int deleted = ll.deleteFirstAndReturn();
+        System.out.println(deleted + " removed!");
         ll.displayLL();
     }
 }
