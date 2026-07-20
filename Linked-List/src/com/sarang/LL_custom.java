@@ -96,6 +96,23 @@ public class LL_custom {
         return node;
     }
 
+    // DELETE MIDDLE ELEMENT
+    public int deleteMiddleAndReturn(int index) {
+        if (index == 0) {
+            return deleteFirstAndReturn();
+        }
+        if (index == size - 1) {
+            return deleteFirstAndReturn();
+        }
+
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+
+        prev.next = prev.next.next;
+        size--;
+        return val;
+    }
+
     // DISPLAY
     public void displayLL() {
         Node temp = head;
