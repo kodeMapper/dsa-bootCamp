@@ -19,7 +19,7 @@ public class Main {
         ll.insertAtMiddle(69, 2);
         ll.displayLL();
 
-        int deleted = ll.deleteFirstAndReturn();
+        int deleted = ll.deleteLastAndReturn();
         System.out.println(deleted + " removed!");
         ll.displayLL();
     }

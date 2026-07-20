@@ -74,6 +74,28 @@ public class LL_custom {
         return val;
     }
 
+    // DELETE FROM LAST
+    public int deleteLastAndReturn() {
+        if (size <= 1) {
+            return deleteFirstAndReturn();
+        }
+
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        size--;
+        return val;
+    }
+    // this gets the second last node
+    public Node get(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
     // DISPLAY
     public void displayLL() {
         Node temp = head;
