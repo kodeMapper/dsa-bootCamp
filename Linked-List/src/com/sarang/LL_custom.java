@@ -113,6 +113,18 @@ public class LL_custom {
         return val;
     }
 
+    // RETURN NODE WHOSE VALUE IS
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
     // DISPLAY
     public void displayLL() {
         Node temp = head;
