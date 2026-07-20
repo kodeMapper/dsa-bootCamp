@@ -10,7 +10,7 @@ public class LL_custom {
         this.size = 0;
     }
 
-    // INSERT
+    // INSERT AT START
     public void insertAtFirst(int val) {
         Node node = new Node(val);
         node.next = head;
@@ -20,7 +20,20 @@ public class LL_custom {
         if (tail == null) {
             tail = head;
         }
+
         size += 1;
+    }
+
+    // INSERT AT END
+    public void insertAtLast(int val) {
+        if (tail == null) {
+            insertAtFirst(val); // only run for the first element
+        } else {
+            Node node = new Node(val);
+            tail.next = node;
+            tail = node;
+            size++;
+        }
     }
 
     // DISPLAY
