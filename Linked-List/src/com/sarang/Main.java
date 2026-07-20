@@ -17,6 +17,8 @@ public class Main {
         ll.insertAtLast(30);
         ll.insertAtLast(40);
 
+        ll.insertAtMiddle(69, 2);
+
         ll.displayLL();
     }
 }

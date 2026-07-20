@@ -26,7 +26,7 @@ public class LL_custom {
 
     // INSERT AT END
     public void insertAtLast(int val) {
-        if (tail == null) {
+        if(tail == null) {
             insertAtFirst(val); // only run for the first element
         } else {
             Node node = new Node(val);
@@ -34,6 +34,31 @@ public class LL_custom {
             tail = node;
             size++;
         }
+    }
+
+    // INSERT AT SOMEWHERE MIDDLE
+    public void insertAtMiddle(int val, int index) {
+        if(index == 0) {
+            insertAtFirst(val);
+            return;
+        }
+
+        if(index == size) {
+            insertAtLast(val);
+            return;
+        }
+
+        Node temp = head;
+
+        // this (temp) will stop before the index
+        for(int i=1; i<index; i++) {
+            temp = temp.next;
+        }
+
+        Node node = new Node(val, temp.next);
+        temp.next = node;
+
+        size++;
     }
 
     // DISPLAY
