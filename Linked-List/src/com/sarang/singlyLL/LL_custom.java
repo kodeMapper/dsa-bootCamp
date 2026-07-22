@@ -1,4 +1,4 @@
-package com.sarang;
+package com.sarang.singlyLL;
 
 public class LL_custom {
 
