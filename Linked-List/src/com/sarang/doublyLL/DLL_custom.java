@@ -1,5 +1,7 @@
 package com.sarang.doublyLL;
 
+import com.sarang.singlyLL.LL_custom;
+
 public class DLL_custom {
 
     private Node head;
@@ -57,6 +59,30 @@ public class DLL_custom {
                 node.next = null;
                 node.prev = tail;
             }
+        }
+    }
+
+    // RETURN NODE WHOSE VALUE IS
+    public Node find(int value) {
+        DLL_custom.Node node = head;
+        while (node != null) {
+            if (node.val == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    // INSERT val after node
+    public void insertAfter(int val, int afterWhat) {
+        Node p = find(afterWhat);
+        Node node = new Node(val);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if(node.next != null) {
+            node.next.prev = node;
         }
     }
 

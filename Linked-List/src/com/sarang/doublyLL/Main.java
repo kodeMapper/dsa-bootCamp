@@ -14,7 +14,10 @@ public class Main {
 //        dll.display();
 //        dll.displayRev();
 
-        dll.insertAtEnd(69);
+//        dll.insertAtEnd(69);
+//        dll.display();
+
+        dll.insertAfter(18, 30);
         dll.display();
     }
 }
