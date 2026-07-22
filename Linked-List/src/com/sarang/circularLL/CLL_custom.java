@@ -16,6 +16,7 @@ public class CLL_custom {
         if(head == null) {
             head = node;
             tail = node;
+            node.next = head;
             return;
         }
 
@@ -24,7 +25,35 @@ public class CLL_custom {
         tail = node;
     }
 
+    public void delete(int val) {
+        Node node = head;
+        if(node == null) {
+            return;
+        }
+
+        // if head is to be removed
+        if(node.val == val) {
+            head = head.next;
+            tail.next = head;
+            return;
+        }
+
+        do {
+            Node nxt = node.next;
+            if(nxt.val == val) {
+                node.next = nxt.next;
+                break;
+            }
+            node = node.next;
+        } while (node != head);
+    }
+
     public void display() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
         Node temp = head;
 
         if(head != null) {

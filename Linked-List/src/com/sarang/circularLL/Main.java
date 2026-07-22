@@ -12,6 +12,9 @@ public class Main {
         cll.insert(50);
         cll.insert(60);
 
+//        cll.display();
+
+        cll.delete(40);
         cll.display();
     }
 }
