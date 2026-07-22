@@ -11,6 +11,7 @@ public class Main {
         dll.insertAtFront(40);
         dll.insertAtFront(50);
 
-        dll.display();
+//        dll.display();
+        dll.displayRev();
     }
 }

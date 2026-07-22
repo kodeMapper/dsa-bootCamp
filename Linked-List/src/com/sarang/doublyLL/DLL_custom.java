@@ -2,7 +2,7 @@ package com.sarang.doublyLL;
 
 public class DLL_custom {
 
-    Node head;
+    private Node head;
     Node tail;
     int size;
 
@@ -30,6 +30,8 @@ public class DLL_custom {
             head.prev = node;
         }
         head = node;
+
+        size++;
     }
 
     public void display() {
@@ -39,5 +41,19 @@ public class DLL_custom {
             temp = temp.next;
         }
         System.out.println("END");
+    }
+
+    public void displayRev() {
+        Node tempLast = null;
+        Node tempStart = head;
+        while (tempStart != null) { // this loop is for reaching to the last node, then we will print backwards
+            tempLast = tempStart; // this is new
+            tempStart = tempStart.next;
+        }
+        while (tempLast != null) { // this loop iterates from end (tempLast) until it gets null of start
+            System.out.print(tempLast.val + " --> ");
+            tempLast = tempLast.prev;
+        }
+        System.out.println("START");
     }
 }
