@@ -77,6 +77,9 @@ public class DLL_custom {
     // INSERT val after node
     public void insertAfter(int val, int afterWhat) {
         Node p = find(afterWhat);
+        if(p == null) {
+            System.out.println("Node doesn't exits!!");
+        }
         Node node = new Node(val);
         node.next = p.next;
         p.next = node;

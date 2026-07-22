@@ -17,7 +17,7 @@ public class Main {
 //        dll.insertAtEnd(69);
 //        dll.display();
 
-        dll.insertAfter(18, 30);
+        dll.insertAfter(18, 221);
         dll.display();
     }
 }
