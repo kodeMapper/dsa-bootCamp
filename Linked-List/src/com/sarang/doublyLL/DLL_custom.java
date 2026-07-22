@@ -34,6 +34,32 @@ public class DLL_custom {
         size++;
     }
 
+    public void insertAtEnd(int val) {
+        if(head == null) {
+            insertAtFront(val);
+        }
+        else {
+            if (tail == null) {
+                Node node = new Node(val);
+                Node temp = head;
+                while(temp.next != null) {
+                    temp = temp.next;
+                }
+
+                temp.next = node;
+                node.next = null;
+                node.prev = temp;
+            }
+
+            if(tail != null) {
+                Node node = new Node(val);
+                tail.next = node;
+                node.next = null;
+                node.prev = tail;
+            }
+        }
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
