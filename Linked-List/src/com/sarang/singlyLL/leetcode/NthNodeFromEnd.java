@@ -30,6 +30,22 @@ public class NthNodeFromEnd {
         return temp;
     }
 
+    static Node usingSlowFast(Node head, int idxFromEnd) {
+        Node fast = head;
+        Node slow = head;
+
+        for(int i=1; i<=idxFromEnd; i++) {
+            fast = fast.next;
+        }
+
+        while(fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow;
+    }
+
     public static void display() {
         Node temp = head;
         while(temp != null) {
@@ -63,6 +79,6 @@ public class NthNodeFromEnd {
 
         display();
 
-        System.out.println(getNthNode(head, 4).val);
+        System.out.println(usingSlowFast(head, 2).val);
     }
 }
