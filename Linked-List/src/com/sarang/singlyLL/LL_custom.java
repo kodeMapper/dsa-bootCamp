@@ -111,6 +111,27 @@ public class LL_custom {
         prev.next = prev.next.next;
         size--;
         return val;
+
+        /*
+
+        we can use this method also (simpler)
+
+        Node temp = head;
+        if(index == 0) {
+            head = head.next;
+            size--;
+            return;
+        }
+
+        for(int i=1; i<=(index-1); i++) {
+            temp = temp.next;
+        }
+
+        temp.next = temp.next.next;
+        tail = temp;
+        size--;
+
+         */
     }
 
     // RETURN NODE WHOSE VALUE IS
@@ -137,7 +158,33 @@ public class LL_custom {
         System.out.println("END");
     }
 
-    private class Node {
+    // DISPLAY RECURSIVELY - works when used as separate class (not as in a data structure like LL_custom)
+    public void displayRecur(Node head) {
+        Node temp = head;
+        if(head == null) {
+            System.out.println("END");
+            return;
+        }
+        else {
+            System.out.print(head + " --> ");
+            displayRecur(head.next);
+        }
+    }
+
+    // DISPLAY RECURSIVELY IN REVERSE ORDER - works when used as separate class (not as in a data structure like LL_custom)
+    public void displayRev(Node head) {
+        Node temp = head;
+        if(head == null) {
+            System.out.println("END");
+            return;
+        }
+        else {
+            displayRev(head.next);
+            System.out.print(head + " --> "); // recursion call stack concept (first call then display)
+        }
+    }
+
+    public static class Node {
         private int value;
         private Node next;
 

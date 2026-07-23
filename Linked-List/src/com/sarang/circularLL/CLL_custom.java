@@ -16,7 +16,6 @@ public class CLL_custom {
         if(head == null) {
             head = node;
             tail = node;
-            node.next = head;
             return;
         }
 
