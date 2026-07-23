@@ -30,6 +30,22 @@ public class NthNodeFromEnd {
         return temp;
     }
 
+    static void deleteNthNode(int idxFromEnd) {
+        Node fast = head;
+        Node slow = head;
+
+        for(int i=1; i<=idxFromEnd; i++) {
+            fast = fast.next;
+        }
+
+        while(fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        slow.next = slow.next.next;
+    }
+
     static Node usingSlowFast(Node head, int idxFromEnd) {
         Node fast = head;
         Node slow = head;
@@ -79,6 +95,8 @@ public class NthNodeFromEnd {
 
         display();
 
-        System.out.println(usingSlowFast(head, 2).val);
+        deleteNthNode(2);
+
+        display();
     }
 }
