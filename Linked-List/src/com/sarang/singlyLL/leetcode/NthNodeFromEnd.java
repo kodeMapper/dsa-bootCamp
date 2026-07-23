@@ -38,6 +38,12 @@ public class NthNodeFromEnd {
             fast = fast.next;
         }
 
+        // but we might get exception for n=size
+        if(fast == null) {
+            head = head.next; // removed head (i.e, last from end)
+            return;
+        }
+
         while(fast.next != null) {
             slow = slow.next;
             fast = fast.next;
@@ -95,7 +101,7 @@ public class NthNodeFromEnd {
 
         display();
 
-        deleteNthNode(2);
+        deleteNthNode(6);
 
         display();
     }
