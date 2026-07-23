@@ -38,6 +38,19 @@ public class FindMiddleElement {
         return temp;
     }
 
+    // USING SLOW AND FAST POINTER
+    public static Node findMiddle(Node head) {
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        return slow;
+    }
+
     public static void main(String[] args) {
         Node a = new Node(1);
         Node b = new Node(2);
@@ -52,6 +65,6 @@ public class FindMiddleElement {
         d.next = e;
         e.next = f;
 
-        System.out.println(middleNode(a).val);
+        System.out.println(findMiddle(a).val);
     }
 }
