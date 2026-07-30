@@ -26,7 +26,7 @@ public class MergeSortedLists {
                 temp1 = temp1.next;
             }
 
-            else if(temp1.val > temp2.val) {
+            else {
                 ListNode node = new ListNode(temp2.val);
                 temp.next = node;
                 temp = node;
@@ -59,7 +59,7 @@ public class MergeSortedLists {
                 temp1 = temp1.next;
             }
 
-            else if(temp1.val > temp2.val) {
+            else {
                 temp.next = temp2;
                 temp = temp2;
                 temp2 = temp2.next;
