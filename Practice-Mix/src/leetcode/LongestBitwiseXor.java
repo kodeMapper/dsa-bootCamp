@@ -2,24 +2,19 @@ package leetcode;
 
 public class LongestBitwiseXor {
     public static int longestSubsequence(int[] nums) {
-        int n = nums.length;
-        int len = 0;
+        int xor = 0;
+        for (int x : nums) xor ^= x;
+        if (xor != 0) return nums.length;
 
-        for (int i = 0; i < n-1; i++) {
-            int count = 0;
-            int xor = nums[i];
-            for (int j = i; j < n-1; j++) {
-                xor = xor ^ nums[j+1];
-                if (xor == 0) {
-                    break;
-                }
-                count++;
+        boolean allZero = true;
+        for (int x : nums) {
+            if (x != 0) {
+                allZero = false;
+                break;
             }
-
-            len = Math.max(len, count+1);
         }
-
-        return len;
+        if (allZero) return 0;
+        return nums.length == 1 ? 0 : nums.length - 1;
     }
 
     public static void main(String[] args) {
