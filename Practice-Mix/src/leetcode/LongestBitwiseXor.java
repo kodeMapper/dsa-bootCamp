@@ -11,7 +11,6 @@ public class LongestBitwiseXor {
             for (int j = i; j < n-1; j++) {
                 xor = xor ^ nums[j+1];
                 if (xor == 0) {
-                    len = j-i+1;
                     break;
                 }
                 count++;
@@ -24,7 +23,7 @@ public class LongestBitwiseXor {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 4};
+        int[] nums = {7, 6, 1, 9};
         System.out.println(longestSubsequence(nums));
     }
 }
