@@ -13,7 +13,7 @@ public class SizeMaxSumHeight {
 
     // 1. Size of the Tree (Total number of nodes)
     public static int size(Node root) {
-        if (root == null) return 0;
+        if (root == null) return 0; // if leaf node (count itself only)
         return 1 + size(root.left) + size(root.right);
     }
 
@@ -25,13 +25,9 @@ public class SizeMaxSumHeight {
 
     // 3. Maximum value node in the Tree
     public static int max(Node root) {
-        if (root == null) return Integer.MIN_VALUE;
-
-        int a = root.val;
-        int leftMax = max(root.left);
-        int rightMax = max(root.right);
-
-        return Math.max(a, Math.max(leftMax, rightMax));
+        if (root == null) return Integer.MIN_VALUE; // in case of negative values (if positive then we can take 0)
+        return Math.max(root.val,
+                        Math.max(max(root.left), max(root.right)));
     }
 
     // 4. Height of the Tree (Measured in levels)
@@ -45,6 +41,19 @@ public class SizeMaxSumHeight {
         int rightHeight = height(root.right);
 
         return 1 + Math.max(leftHeight, rightHeight);
+    }
+
+    // (HW) 5. Minimum value node in the Tree
+    public static int min(Node root) {
+        if (root == null) return Integer.MAX_VALUE; // in case of negative values (if positive then we can take 0)
+        return Math.min(root.val,
+                Math.min(min(root.left), min(root.right)));
+    }
+
+    // (HW) 6. Product of nodes of Tree
+    public static int prod(Node root) {
+        if (root == null) return 1; // in case of negative values (if positive then we can take 0)
+        return root.val * prod(root.left) * prod(root.right);
     }
 
     public static void main(String[] args) {
@@ -68,5 +77,7 @@ public class SizeMaxSumHeight {
         System.out.println("Sum of the tree: " + sum(root));
         System.out.println("Max value in the tree: " + max(root));
         System.out.println("Height of the tree: " + height(root));
+        System.out.println("Min value of the tree: " + min(root));
+        System.out.println("Product of the tree: " + prod(root));
     }
 }
