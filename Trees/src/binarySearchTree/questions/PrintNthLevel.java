@@ -14,7 +14,10 @@ public class PrintNthLevel {
     }
     static void nthLevel(Node root, int n) {
         if(root == null) return;
-        if(n == 1) System.out.print(root.val+ " ");
+        if(n == 1) {
+            System.out.print(root.val+ " ");
+            return; // due to this, complexity reduces to O(n)
+        }
         nthLevel(root.left, n-1); // left
         nthLevel(root.right, n-1); // right
     }
@@ -55,8 +58,8 @@ public class PrintNthLevel {
         // to print the whole tree (in level order traversal),
         int level = height(root) + 1;
         for(int i=1; i<=level; i++) {
-            nthLevel(root, i);
+            nthLevel(root, i); // O(n)
             System.out.println();
-        }
+        } // O(n*log(n))
     }
 }
