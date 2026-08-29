@@ -34,7 +34,7 @@ public class SizeMaxSumHeight {
     public static int height(Node root) {
         if (root == null) return 0;
 
-        // Note: If you want height in terms of edges, add this base case:
+        // Note: If you want height in terms of edges (usually we consider this), add this base case:
         // if (root.left == null && root.right == null) return 0;
 
         int leftHeight = height(root.left);
